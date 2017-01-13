@@ -1,0 +1,39 @@
+//verificação se os numeros de um vetor e primo
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+  int  i, cont, div, vet[15];
+
+//ler o vetor
+  for (i=0; i<15; i++) {
+    scanf("%d",&vet[i] );
+
+  }
+  system("cls");
+
+/*contador do vetor e zerador div */
+  for (i=0; i<15; i++) {
+    div = 0;
+/*conta os divisores */
+    for (cont=1; cont<=vet[i]; cont++) {
+      if ((vet[i] % cont) == 0){
+         div++;
+      }
+    }
+
+    if (div == 2 || vet[i]==1 ){
+
+       printf("a[%d] = %2d e primo! \n", i, vet[i]);
+    }
+    else{
+        printf("a[%d] = %2d \n", i, vet[i]);
+
+    }
+  }
+    system("PAUSE");
+    return 0;
+}
