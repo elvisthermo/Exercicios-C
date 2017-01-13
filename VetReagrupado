@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float vetA[10],vetB[10],vetC[20];
+    int i,cont=0;
+
+    printf("vetor A: \n");
+    for(i=0;i<10;i++){
+        scanf("%f",&vetA[i]);
+
+    }
+    printf("vetor B: \n");
+    for(i=0;i<10;i++){
+        scanf("%f",&vetB[i]);
+
+    }
+
+    system("cls");
+/* prencher os pares do vetor*/
+    cont=0;
+    for(i=0;i<20;i++){
+
+            if((i%2)==0){
+                vetC[i]=vetA[cont];
+                cont=cont+1;
+            }
+        }
+
+/*prencher os impares do vetor*/
+    cont=0;
+    for(i=0;i<20;i++){
+        if((i%2)!=0){
+            vetC[i]=vetB[cont];
+            cont=cont+1;
+            }
+    }
+
+
+    printf("vetor C: \n");
+    for(i=0;i<20;i++){
+        printf("posicao:%d VETC %.1f \n",i,vetC[i]);
+    }
+
+
+
+    system("pause");
+    return 0;
+}
